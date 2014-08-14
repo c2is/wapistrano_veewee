@@ -19,7 +19,7 @@ alias veewee="/opt/local/bin/bundle-1.9 exec veewee"
 veewee vbox define wapistrano-debian Debian-7.6.0-amd64-netboot
 ```
 
-#3 Clone wapistrano_veewee somewhere on your hard disk and link files into the definition
+#3 Clone wapistrano_veewee somewhere on your hard disk and link files into the veewee definition's dir
 ```
 git clone git@github.com:c2is/wapistrano_veewee.git
 cd veewee/definitions/wapistrano_debian/

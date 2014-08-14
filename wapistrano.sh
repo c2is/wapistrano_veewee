@@ -54,16 +54,14 @@ chmod 775 /var/log/wapyd/
 cd /usr/local/
 git clone https://github.com/c2is/wapy
 mkdir /usr/local/wapy/.ssh/
-echo <<EOF >> /usr/local/wapy/.ssh/config
+cat <<EOF >> /usr/local/wapy/.ssh/config
 Host *
-	StrictHostKeyChecking no"
+	StrictHostKeyChecking no
 EOF
-chown wapyd:adm /usr/local/wapy/.ssh/
+ssh-keygen -f /usr/local/wapy/.ssh/id_rsa -t rsa -N ''
+chown -R wapyd:adm /usr/local/wapy/.ssh/
 chmod 700 /usr/local/wapy/.ssh/
 chown -R wapyd:adm /usr/local/wapy/
-su wapyd
-ssh-keygen -f /usr/local/wapy/.ssh/id_rsa -t rsa -N ''
-exit
 mkdir /var/capistrano/
 chown -R wapyd:adm /var/capistrano/
 cp /usr/local/wapy/wapyd /etc/init.d/
