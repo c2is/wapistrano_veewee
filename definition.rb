@@ -39,7 +39,7 @@ Veewee::Definition.declare({
   :shutdown_cmd => "halt -p",
   :postinstall_files => [
     "base.sh",
-    "vagrant.sh",
+    #"vagrant.sh",
     "virtualbox.sh",
     "wapistrano.sh",
     #"vmfusion.sh",
